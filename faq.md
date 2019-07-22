@@ -190,7 +190,7 @@ ULive通过回调客户接口，通知当前推流状态。当主播推流开始
 <http://127.0.0.1/publish_stop?ip=推流端IP&id=流名&node=节点IP&app=推流域名&appname=发布点>
 其中，publish\_start和publish\_stop为客户提供的回调cgi。
 
-## 4\. SDK
+## 4. SDK
 
 ## Q：UCloud直播云有自己的直播SDK么？
 
