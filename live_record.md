@@ -177,15 +177,16 @@ ULive服务器会对url进行校验，并检查时间t是否过期。其中过�
 
 假设：
 
-1)未加密前url为rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest
+1) 未加密前url为rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest
 
-2)当前时间戳为t = 52946dd7
+2) 当前时间戳为t = 52946dd7
 
-3)约定密钥为secretkey
+3) 约定密钥为secretkey
 
 则:k=md5(“secretkey”+“/ucloud/mytest”+“52946dd7”) =
 2f94cdaf8ea4bdca793e64aba7cb1dea
 
 最终生成的链接如下:
+
 <rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest?t=52946dd7&k=2f94>
 cdaf8ea4bdca793e64aba7cb1dea
