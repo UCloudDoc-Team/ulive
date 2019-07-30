@@ -14,25 +14,21 @@
 
 **示例**
 
-> 接入点：test
-> 
-> rtmp播放域名：rtmp.company.com
-> 
-> hls播放域名：hls.company.com
-> 
-> rtmp播放地址：[rtmp://rtmp.company.com/test/{streamid}](rtmp://rtmp.company.com/test/%7Bstreamid%7D)
-> 
-> hls播放地址：[http://hls.company.com/test/{streamid}/playlist.m3u8](http://hls.company.com/test/%7Bstreamid%7D/playlist.m3u8)
+ 接入点：test
 
-\>
+ rtmp播放域名：rtmp.company.com
 
-> 若配置了转码规则(转码后缀：500k)且需要播放转码后的视频，则播放地址为：
-> 
-> rtmp播放地址：[rtmp://rtmp.company.com/test/{streamid}\_500k](rtmp://rtmp.company.com/test/%7Bstreamid%7D_500k)
+ hls播放域名：hls.company.com
+ 
+ rtmp播放地址：[rtmp://rtmp.company.com/test/{streamid}]
+ 
+ hls播放地址：[http://hls.company.com/test/{streamid}/playlist.m3u8]
 
-\>
+若配置了转码规则(转码后缀：500k)且需要播放转码后的视频，则播放地址为：
 
-> hls播放地址：[http://hls.company.com/test/{streamid}\_500k/playlist.m3u8](http://hls.company.com/test/%7Bstreamid%7D_500k/playlist.m3u8)
+rtmp播放地址：[rtmp://rtmp.company.com/test/{streamid}_500k]
+
+hls播放地址：[http://hls.company.com/test/{streamid}_500k/playlist.m3u8]
 
 ## 直播录制
 
@@ -60,7 +56,7 @@
 
 下面的推流url表示开启录制，并且指定录制的文件名为myfile.m3u8：
 
-<rtmp:%%//%%publish3.cdn.ucloud.com.cn/ucloud/stream?record=true&filename=myfile>
+<rtmp://publish3.cdn.ucloud.com.cn/ucloud/stream?record=true&filename=myfile>
 
 ### 录制文件默认命名规则
 
@@ -84,12 +80,12 @@ hls录制：域名+流名+文件名.m3u8 其中文件名由用户推流时指定
 
 文件录制完成后，可以回调客户的接口(需在配置录制规则时填写)，通知录制的文件名、文件大小、时长等信息。回调的url格式如下：(POST请求)
 
-<http:%%//%%接口地址?filename=文件名&filesize=文件大小&spacename=bucket名称&duration=视频时长&url=视屏url地址>
+<http://接口地址?filename=文件名&filesize=文件大小&spacename=bucket名称&duration=视频时长&url=视屏url地址>
 
 以下是一个回调的例子：
 
-<http:%%//%%cgi.ucloud.com.cn/record_callback?publishdomain=publish-test.ucloud.com.cn&streamid>
-=test\&filesize=5236598745\&duration=22\&url=<http:%%//%%wangqiguoy.cn-bj.ufileos.com/test.flv>
+<http://cgi.ucloud.com.cn/record_callback?publishdomain=publish-test.ucloud.com.cn&streamid>
+=test&filesize=5236598745&duration=22&url=<http://wangqiguoy.cn-bj.ufileos.com/test.flv>
 
 视频时长单位：秒，文件大小单位：字节。
 
@@ -97,11 +93,11 @@ hls录制：域名+流名+文件名.m3u8 其中文件名由用户推流时指定
 
 hls录制回调的url格式如下：(POST请求)
 
-<http:%%//%%接口地址?filename=文件名&filesize=文件大小&spacename=bucket名称&duration=视频时长>
+<http://接口地址?filename=文件名&filesize=文件大小&spacename=bucket名称&duration=视频时长>
 
 以下是一个回调的例子：
 
-<http:%%//%%cgi.ucloud.com.cn/record_callback?filename=test.m3u8&filesize=343&spacename=bucket_test&duration=50>
+<http://cgi.ucloud.com.cn/record_callback?filename=test.m3u8&filesize=343&spacename=bucket_test&duration=50>
 
 视频时长单位：秒，文件大小单位：字节。
 
@@ -111,9 +107,9 @@ Ulive提供录制的测试环境，方便客户进行测试联调。测试环境
 
 假设您的直播流id是mystream，想要录制的文件名是myfile.m3u8，则使用如下的推流地址即可进行录制：
 
-<rtmp:%%//%%publish3.cdn.ucloud.com.cn/ucloud/mystream?record=true&filename=myfile>
+<rtmp://publish3.cdn.ucloud.com.cn/ucloud/mystream?record=true&filename=myfile>
 
-当您推流结束后，您可以通过如下地址播放录制好的视频：<http:%%//%%ulive-record.ufile.ucloud.com.cn/myfile.m3u8>
+当您推流结束后，您可以通过如下地址播放录制好的视频：<http://ulive-record.ufile.ucloud.com.cn/myfile.m3u8>
 
 ## 纯音频/视频输出
 
@@ -127,7 +123,7 @@ Ulive提供录制的测试环境，方便客户进行测试联调。测试环境
 
 需要在rtmp播放域名：vlive3.rtmp.cdn.ucloud.com.cn下播放纯音频流，则指定下面的URL进行播放：
 
-<rtmp:%%//%%vlive3.rtmp.cdn.ucloud.com.cn/ucloud/test?only-audio=1>
+<rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/test?only-audio=1>
 
 ## 直播流封禁/解禁
 
@@ -148,12 +144,12 @@ API接口及使用方式请参考[直播流封禁/解禁文档](http://product-t
 推流开始和推流结束的端口需分开配置，示例如下：
 
 1、通知客户推流开始:
-<http:%%//%%127.0.0.1/publish_start?ip=推流端IP&id=流名&node=节点IP&app=推流域名&appname=发布点>
+<http://127.0.0.1/publish_start?ip=推流端IP&id=流名&node=节点IP&app=推流域名&appname=发布点>
 
 2、通知客户推流结束:
-<http:%%//%%127.0.0.1/publish_stop?ip=推流端IP&id=流名&node=节点IP&app=推流域名&appname=发布点>
+<http://127.0.0.1/publish_stop?ip=推流端IP&id=流名&node=节点IP&app=推流域名&appname=发布点>
 
-其中，publish \_ start 和 publish \_ stop 为客户提供的回调cgi。
+其中，publish _ start 和 publish _ stop 为客户提供的回调cgi。
 
 ## 直播鉴权
 
@@ -167,7 +163,7 @@ ULive可以采用对url某些字段进行md5加密的方法，来校验url是否
 
 鉴权总体策略为用户按照规则生成如下的链接:
 
-<rtmp:%%//%%abc.com/application/mystream?k=xxxxxx&t=yyyy>
+<rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy>
 
 1)t为16进制的服务器时间戳
 
@@ -191,5 +187,5 @@ ULive服务器会对url进行校验，并检查时间t是否过期。其中过�
 2f94cdaf8ea4bdca793e64aba7cb1dea
 
 最终生成的链接如下:
-<rtmp:%%//%%vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest?t=52946dd7&k=2f94>
+<rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest?t=52946dd7&k=2f94>
 cdaf8ea4bdca793e64aba7cb1dea
