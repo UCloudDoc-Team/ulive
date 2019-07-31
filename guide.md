@@ -40,7 +40,9 @@
 4） 直播名称：请填写推送和播放直播流的流名称，可任意指定（仅限于英文字母、数字、下划线）。
 
 PS:
+
 1、推流域名与各个协议的播放域名必须两两互不相同。
+
 2、使用的域名需经过工信部备案
 
  例如：
@@ -50,9 +52,11 @@ PS:
 rtmp播放域名：rtmp.company.com，
 hls播放域名：hls.company.com
  
-则推流地址为：[rtmp://publish.company.com/test/{streamid}]
+则推流地址为：
+[rtmp://publish.company.com/test/{streamid}]
 
-rtmp播放地址为：[rtmp://rtmp.company.com/test/{streamid}]
+rtmp播放地址为：
+[rtmp://rtmp.company.com/test/{streamid}]
 
 hls播放地址为：[http://hls.company.com/test/{streamid}/playlist.m3u8]
 
