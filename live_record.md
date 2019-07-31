@@ -22,11 +22,13 @@
  
  rtmp播放地址：[rtmp://rtmp.company.com/test/{streamid}]
  
+ 
  hls播放地址：[http://hls.company.com/test/{streamid}/playlist.m3u8]
 
 若配置了转码规则(转码后缀：500k)且需要播放转码后的视频，则播放地址为：
 
 rtmp播放地址：[rtmp://rtmp.company.com/test/{streamid}_500k]
+
 
 hls播放地址：[http://hls.company.com/test/{streamid}_500k/playlist.m3u8]
 
@@ -52,11 +54,12 @@ hls播放地址：[http://hls.company.com/test/{streamid}_500k/playlist.m3u8]
 
 1)、record=true（必须），设置该路流需要开启录制。
 
-2)、**(仅支持hls录制)**filename=xxx（非必须），设置该路流录制后的文件名为xxx.m3u8，如果没有该参数，则默认使用推流id作为文件名。
+2)、filename=xxx（非必须），设置该路流录制后的文件名为xxx.m3u8，如果没有该参数，则默认使用推流id作为文件名。**(仅支持hls录制)**
 
 下面的推流url表示开启录制，并且指定录制的文件名为myfile.m3u8：
 
-<rtmp://publish3.cdn.ucloud.com.cn/ucloud/stream?record=true&filename=myfile>
+[rtmp://publish3.cdn.ucloud.com.cn/ucloud/stream?record=true&filename=myfile]
+
 
 ### 录制文件默认命名规则
 
