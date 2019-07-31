@@ -43,7 +43,7 @@ rtmp与flv都是流式的传输协议，可以获得比较短的内容延迟。�
 
 **A:** UCloud直播云为客户提供多个沟通渠道，具体如下：
 
-1） UCloud客服邮箱 <C_onlinesales@ucloud.cn>
+1） UCloud客服邮箱 C_onlinesales@ucloud.cn
 
 2） 线下客户经理
 
@@ -71,7 +71,7 @@ rtmp与flv都是流式的传输协议，可以获得比较短的内容延迟。�
 
 **A:**
 Ulive采用对url某些字段进行md5加密的方法，来校验url是否合法。客户有鉴权需求时，请联系UCloud技术支持协助配置，并协商好约定的密钥。鉴权总体策略为，用户按照规则生成如下的链接：
-[<rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy>](rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy)
+[<rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy>]
 
 （1）t为16进制的服务器时间戳
 
@@ -88,9 +88,10 @@ Ulive服务器会对url进行校验，并检查时间t是否过期。其中过�
 （2）当前时间戳为52946dd7
 
 （3）约定密钥为secretkey 则：k = md5(“secretkey”+“/ucloud/mytest”+“52946dd7”) =
-2f94cdaf8ea4bdca793e64aba7cb1dea 最终生成的链接如下：
+2f94cdaf8ea4bdca793e64aba7cb1dea 
 
-<rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest?t=52946dd7&k=2f94cdaf8ea4bdca793e64aba7cb1dea>
+最终生成的链接如下： 
+rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest?t=52946dd7&k=2f94cdaf8ea4bdca793e64aba7cb1dea
 
 ## Q：可以对直播进行录制么？
 
