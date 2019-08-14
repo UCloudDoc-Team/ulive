@@ -88,7 +88,7 @@ http:%%//%%接口地址?filename=文件名&filesize=文件大小&spacename=bucke
 
 以下是一个回调的例子：
 
-http:%%//%%cgi.ucloud.com.cn/record_callback?publishdomain=publish-test.ucloud.com.cn&streamid>
+http:%%//%%cgi.ucloud.com.cn/record_callback?publishdomain=publish-test.ucloud.com.cn&streamid
 =test&filesize=5236598745&duration=22&url=http:%%//%%wangqiguoy.cn-bj.ufileos.com/test.flv
 
 视频时长单位：秒，文件大小单位：字节。
