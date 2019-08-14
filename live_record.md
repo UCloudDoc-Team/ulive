@@ -21,7 +21,7 @@
  hls播放域名：hls.company.com
  
  rtmp播放地址：
- <rtmp://rtmp.company.com/test/{streamid}>
+ rtmp:rtmp.company.com/test/{streamid}>
  
  hls播放地址：
  <http://hls.company.com/test/{streamid}/playlist.m3u8>
