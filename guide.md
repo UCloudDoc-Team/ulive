@@ -53,12 +53,12 @@ rtmp播放域名：rtmp.company.com，
 hls播放域名：hls.company.com
  
 则推流地址为：
-< rtmp://publish.company.com/test/{streamid} >
+rtmp:%%//%%publish.company.com/test/{streamid}
 
 rtmp播放地址为：
-< rtmp://rtmp.company.com/test/{streamid} >
+rtmp:%%//%%rtmp.company.com/test/{streamid}
 
-hls播放地址为：[http://hls.company.com/test/{streamid}/playlist.m3u8]
+hls播放地址为：http://hls.company.com/test/{streamid}/playlist.m3u8
 
 ### Step3. 等待域名配置
 
