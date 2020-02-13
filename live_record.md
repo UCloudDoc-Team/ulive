@@ -84,7 +84,7 @@ hls录制：域名+流名+文件名.m3u8 其中文件名由用户推流时指定
 
 文件录制完成后，可以回调客户的接口(需在配置录制规则时填写)，通知录制的文件名、文件大小、时长等信息。回调的url格式如下：(POST请求)
 
-http:%%//%%接口地址?filename=文件名&filesize=文件大小&spacename=bucket名称&duration=视频时长&url=视屏url地址
+http://接口地址?filename=文件名&filesize=文件大小&spacename=bucket名称&duration=视频时长&url=视屏url地址
 
 以下是一个回调的例子：
 
