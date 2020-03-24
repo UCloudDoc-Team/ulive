@@ -12,7 +12,7 @@
 
 ![](/images/ulive选择计费方式.jpg)
 
-计费模式分为两种：流量计费和带宽计费，请选择适合您业务的计费模式。计费规则请参考：[产品价格](https://docs.ucloud.cn/video/ulive/charge)
+计费模式分为两种：流量计费和带宽计费，请选择适合您业务的计费模式。计费规则请参考：[产品价格](https://docs.ucloud.cn/ulive/charge)
 
 注：若要开通带宽计费，需提前联系客户经理开通后付费权限。
 

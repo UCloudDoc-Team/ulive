@@ -144,7 +144,7 @@
 
 转码为被动功能，当用户通过转码规则中全局唯一的转码后缀播放转码视频时，触发转码功能开启。当直播流结束后转码结束。
 
-转码使用方式请参考[直播转码文档](https://docs.ucloud.cn/video/ulive/live_record)。
+转码使用方式请参考[直播转码文档](https://docs.ucloud.cn/ulive/live_record)。
 
 ### 配置直播录制
 
@@ -159,12 +159,12 @@
 2） 存放地址：指录制后输出的视频文件存放的地址，当前支持ufile存储空间上传。
 
 3）
-录制方式：支持强制录制/选择性录制。强制录制指所有推到该加速域名上的直播流都默认进行录制;选择性录制则需带上录制参数进行推流才触发录制规则。参考[直播录制文档](https://docs.ucloud.cn/video/ulive/live_record)。
+录制方式：支持强制录制/选择性录制。强制录制指所有推到该加速域名上的直播流都默认进行录制;选择性录制则需带上录制参数进行推流才触发录制规则。参考[直播录制文档](https://docs.ucloud.cn/ulive/live_record)。
 
 4） 过期删除：默认不开启。开启后将在指定的保留时间结束后删除录制文件。
 
 5）
-回调URL：根据需求选填，可为空。参考[直播录制文档](https://docs.ucloud.cn/video/ulive/live_record)。
+回调URL：根据需求选填，可为空。参考[直播录制文档](https://docs.ucloud.cn/ulive/live_record)。
 
 #### 开启/关闭直播录制规则
 
@@ -177,7 +177,7 @@
 如果您的录制规则为“选择性录制”，则还需要在推流时附带指定参数，才能进行录制。
 
 \[选择性录制请求参数\]/\[录制的视频文件命名规则\]
-等信息请参考[直播录制文档](https://docs.ucloud.cn/video/ulive/live_record)。
+等信息请参考[直播录制文档](https://docs.ucloud.cn/ulive/live_record)。
 
 ## 日志下载
 
