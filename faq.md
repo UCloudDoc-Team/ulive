@@ -55,7 +55,7 @@ rtmp与flv都是流式的传输协议，可以获得比较短的内容延迟。�
 
 ## Q：如何创建直播加速？
 
-**A:** 请参考https://docs.ucloud.cn/video/ulive/guide
+**A:** 请参考https://docs.ucloud.cn/ulive/guide
 
 ## Q：推流加速与拉流加速有什么区别？
 
