@@ -1,5 +1,5 @@
 
- # [概览](/ulive/README)
+ # 概览
 * [产品简介](/ulive/intro)
 * 快速上手
   * [开通ULive服务](/ulive/guide/open)
