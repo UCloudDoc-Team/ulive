@@ -11,7 +11,7 @@
   * [创建直播加速](/ulive/guide/create)
   * [直播加速域名审核](/ulive/guide/check)
   * [配置CNAME](/ulive/guide/cname)
-  * [停止ULive加速服务](/ulive/guide/stop)
+  * [停止ULive加速服务](/ulive/guide/stop1)
 
 * [操作指南](/ulive/live_stream)
 
