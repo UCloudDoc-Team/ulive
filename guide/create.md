@@ -38,3 +38,15 @@
 | 回源地址 | 指进行播放加速时，加速的直播流是从哪里获取。可以是推流域名或者自定义源站<br />当为推流域名时，请选择您在UCloud创建的推流加速域名，接入点同推流加速接入点。<br />当为自定义源站时，可以是IP或者源站域名或在其他提供直播加速服务厂商的推流域名。同时需要定义接入点。 |      |
 | 业务组   | 在对应的项目下设置不同的业务组进行资源管理。                 |      |
 
+#### 推拉流地址：
+
+例如：推流域名：publish.company.com，接入点：test，播放域名：play.company.com
+
+推流地址为： rtmp://publish.company.com/test/{streamid}
+
+播放地址为：
+
+* RTMP播放地址： rtmp://play.company.com/test/{streamid}
+* FLV播放地址：http://play.company.com/test/{streamid}.flv
+* HLS播放地址：http://play.company.com/test/{streamid}/playlist.m3u8
+
