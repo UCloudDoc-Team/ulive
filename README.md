@@ -1,6 +1,6 @@
  # 概览
 
-* [产品简介.](/ulive/intro)
+* [产品简介](/ulive/intro)
 * 快速上手
   * [开通ULive服务](/ulive/guide/open)
   * [创建直播加速](/ulive/guide/create)
