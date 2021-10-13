@@ -195,6 +195,7 @@ ULive服务器会对url进行校验，并检查时间t是否过期。其中过�
 rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest?t=52946dd7&k=2f94
 cdaf8ea4bdca793e64aba7cb1dea
 
+
 ## 快直播体验
 
 快直播（Live Event Broadcasting，LEB）（超低延迟直播），是基于rtc协议，比传统直播协议延迟更低，为观众提供毫秒级的直播观看体验。满足对延迟性能高要求的场景需求，适用于直播课程、电商直播、赛事直播等业务场景。
