@@ -10,7 +10,7 @@
 
 1.登录UCloud控制台，点击进入Ulive产品界面
 
-![image-20201123095914996](../images/image-20201123095914996.png)
+![selectproduce_2021.bmp](../images/selectproduce_2021.bmp)
 
 2.点击【选择计费方式】，根据您的业务类型选择合适的计费模式。
 
