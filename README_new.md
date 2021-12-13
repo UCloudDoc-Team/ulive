@@ -8,7 +8,7 @@
   * [直播加速域名审核](/ulive/guide/check)
   * [配置CNAME](/ulive/guide/cname)
   * [停止ULive加速服务](/ulive/guide/stop)
-* [操作指南]
+* 操作指南
   * [实时监控](/ulive/DOING/REALTIME)
   * [统计分析](/ulive/DOING/census)
   * [直播流管理](/ulive/DOING/ulivelist)
