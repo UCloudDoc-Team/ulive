@@ -13,7 +13,7 @@
 |字段|	说明	|例子|
 |---|---|---|
 |$time	|ISO8601时间格式	|2021-12-13T00:00:01|
-|$command	|记录流的状态，具体内容显示参考[备注1](https://cms-docs.ucloudadmin.com/ulive/DOING/logs?id=%e5%a4%87%e6%b3%a81)	|flv play|
+|$command	|记录流的状态，具体内容显示参考[备注1](../ulive/DOING/logs.md#备注1)	|flv play|
 |$uuid	|uuid字符串，用于准确区分每次连接	|db248fdf-1712-406f-b276-0084ed1cc2f7|
 |$user_addr	|播放用户或推流主播IP地址	|127.0.0.1|
 |$node_addr	|播放用户或推流主播所连接的服务器节点ip地址	|127.0.0.1|
