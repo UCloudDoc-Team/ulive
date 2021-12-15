@@ -4,7 +4,12 @@
 
 ![日志下载](../images/2021-日志下载.png)
 
+默认配置格式如下:
+
+  > $time    $command      $uuid    $user_addr     $node_addr      $domain    $app      $name     $in_bytes     $out_bytes     \"$param\"     \"$uri\"      \"$ua\"    $return    \"$status\"    $utime"     $hit 
+
 ## 日志格式说明
+
 |字段|	说明	|例子|
 |---|---|---|
 |$time	|ISO8601时间格式	|2021-12-13T00:00:01|
@@ -27,6 +32,7 @@
 
 ----------------------
 ## 备注1
+
 |$command值|说明|
 |----|----|
 |flvplay	|HTTP-FLV,HTTPS_FLV播放开始|
@@ -41,3 +47,18 @@
 
 ## 备注2
 
+| $status | 说明  |
+|--------|-------|
+|InitStatus              |直播状态未知，初始为这个状态|
+|StreamEOF               |直播流正常结束|
+|StreamForbidden         |直播流被禁止播放或者推流|
+|StreamNotFound          |直播流不存在|
+|StreamTimeout           |直播流源超时|
+|PublishChange           |直播流新主播替换了旧主播，断开旧主播连接|
+|StreamCodecChange       |直播流编码信息发生变化，导致的断流|
+|UserEOF                 |用户明确结束(HTTP-FLV, HTTP-HLS没有)|
+|UserFIN                 |用户主动断开连接|
+|UserTimeout             |用户超时|
+|UserAuthFailed          |用户鉴权失败|
+|UserError               |用户数据异常|
+|RecordError             |超过切片最大时间的2倍，还没产生切片，流异常|
