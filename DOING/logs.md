@@ -26,7 +26,7 @@
 |\"$uri\"	|Http请求的URI, RTMP	|/live/ucloud.flv|
 |\"$ua\"	|Http请求的user_agent,rtmp的flash版本	|Wget/1.19.1 (linux-gnu)|
 |$return	|返回的状态码	0
-|\"$status\"	|链接状态，具体内容显示参考[备注2](../ulive/DOING/logs?id=%e5%a4%87%e6%b3%a81)	|normal|
+|\"$status\"	|链接状态，具体内容显示参考[备注2](../ulive/DOING/logs.md#备注2)	|normal|
 |$utime"	|用户从连接到结束所用时长, 单位为ms	|30179|
 |$hit	|"Hit", "Miss",缓存是否命中	|HIT|
 
