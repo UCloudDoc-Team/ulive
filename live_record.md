@@ -137,64 +137,6 @@ rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/test?only-audio=1
 
 API接口及使用方式请参考[直播流封禁/解禁文档](http://product-tools.cn-bj.ufileos.com/ULive/Ulive直播禁播&解禁文档.pdf)。
 
-## 直播推流状态回调
-
-当主播推流开始或者推流结束时，ULive可以通过客户配置的回调接口，通知客户推流开始或者断开的事件，方便客户对直播流进行管理。
-
-**客户需要回调功能时，请联系技术支持进行配置。**
-
-#### 示例
-
-推流开始和推流结束的端口需分开配置，示例如下：
-
-1、通知客户推流开始:
-http://127.0.0.1/publish_start?ip=推流端IP&id=流名&node=节点IP&app=推流域名&appname=发布点
-
-2、通知客户推流结束:
-http://127.0.0.1/publish_stop?ip=推流端IP&id=流名&node=节点IP&app=推流域名&appname=发布点
-
-其中，publish _ start 和 publish _ stop 为客户提供的回调cgi。
-
-## 直播鉴权
-
-直播鉴权功能即为直播“防盗链”。
-
-ULive可以采用对url某些字段进行md5加密的方法，来校验url是否合法。防止域名被盗用，产生高额流量。
-
-**客户有鉴权需求时，请联系UCloud技术支持协助配置，并协商好约定的密钥。**
-
-### 鉴权策略
-
-鉴权总体策略为用户按照规则生成如下的链接:
-
-rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy
-
-1)t为16进制的服务器时间戳
-
-2)k为经过md5加密的字符串，生成规则为:k=md5(约定密钥+流路径+t),
-
-本例中，流路径为"/application/mystream "
-
-ULive服务器会对url进行校验，并检查时间t是否过期。其中过期时间可以按需求进行配置，默认配置为5分钟。
-
-### 示例
-
-假设：
-
-1) 未加密前url为rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest
-
-2) 当前时间戳为t = 52946dd7
-
-3) 约定密钥为secretkey
-
-则:k=md5(“secretkey”+“/ucloud/mytest”+“52946dd7”) =
-2f94cdaf8ea4bdca793e64aba7cb1dea
-
-最终生成的链接如下:
-
-rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest?t=52946dd7&k=2f94
-cdaf8ea4bdca793e64aba7cb1dea
-
 
 ## 低延时直播体验
 
