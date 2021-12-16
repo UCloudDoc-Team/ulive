@@ -21,7 +21,7 @@
 
 ![2021-选择ulive计费方式.png](../images/2021-选择ulive计费方式.png)
 
-详细计费规则请参考：[Ulive产品计费](../charge.md)
+详细计费规则请参考：[Ulive产品计费](/ulive/charge.md)
 
 注：若要开通月付费，需提前联系客户经理开通权限。
 
