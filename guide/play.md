@@ -81,6 +81,8 @@ rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest?t=52946dd7&k=2f94 cdaf8ea4bdc
 
 只允许配置黑名单或者白名单的一种，支持IP或者网段输入，使用回车符分割多个IP。
 
+![播放域名ip黑白名单](../images/2021-播放域名ip黑白名单.png)
+
 ## referer黑白名单
 
 只允许配置黑名单或者白名单的一种，允许空referer，支持正则输入，使用回车符分割多个referer。
