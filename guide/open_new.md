@@ -4,7 +4,7 @@
 
 ### 前提条件
 
-您需要完成UCloud账户注册和实名认证后，即可开通Ulive服务。
+您需要完成UCloud账户注册和<strong>实名认证</strong>后，即可开通Ulive服务。
 
 操作步骤
 
