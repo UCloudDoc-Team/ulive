@@ -6,7 +6,9 @@
 
 默认配置格式如下:
 
-  > $time    $command      $uuid    $user_addr     $node_addr      $domain    $app      $name     $in_bytes     $out_bytes     \"$param\"     \"$uri\"      \"$ua\"    $return    \"$status\"    $utime"     $hit 
+<pre class="pre codeblock" id="codeblock-6k4-zzw-ye2"><code> $time    $command      $uuid    $user_addr     $node_addr      $domain    $app      $name     $in_bytes     $out_bytes     \"$param\"     \"$uri\"      \"$ua\"    $return    \"$status\"    $utime"     $hit </code></pre>
+
+  <pre class="pre codeblock" id="codeblock-6k4-zzw-ye2"><code>2021-12-13T00:00:01  flv play  db248fdf-1712-406f-b276-0084ed1cc2f7  127.0.0.1  127.0.0.1  test.publish.alixie.com  live  ucloud  3539  3539  "UliveHost=test.publish.alixie.com&source=transcode_codec&no_resume=1"  "/live/ucloud.flv"  "Wget/1.19.1 (linux-gnu)"  0  "InitStatus"  0  -1|-1|-1(ms)  Hit </code></pre>
 
 ## 日志格式说明
 
@@ -40,7 +42,7 @@
 |rtmpplay	|RTMP播放开始|
 |rtmppublish	|RTMP推流开始|
 |rtmpclose	|RTMP播放及推流结束|
-|以下类型包括只记录结束：	|
+|<strong>以下类型包括只记录结束：	</strong>|
 |hlsm3u8	|HLSM3U8请求访问|
 |hlsts	|HLSTS请求访问|
 |httprequest	|其它HTTP请求|
