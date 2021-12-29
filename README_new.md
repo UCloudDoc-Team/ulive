@@ -14,5 +14,5 @@
   * [直播流管理](/ulive/DOING/ulivelist)
   * [日志下载](/ulive/DOING/logs)
 * [扩展功能](/ulive/live_record)
-* [产品价格](/ulive/charge)
+* [产品价格](/ulive/charge_new)
 * [FAQ](/ulive/faq)
