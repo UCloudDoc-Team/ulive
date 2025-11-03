@@ -19,7 +19,7 @@
 
 ## Q：如何创建直播加速？
 
-**A:** 请参考https://docs.ucloud.cn/ulive/guide
+**A:** 请参考`https://docs.ucloud.cn/ulive/guide`
 
 ## Q：推流加速与拉流加速有什么区别？
 
@@ -35,7 +35,7 @@
 
 **A:**
 Ulive采用对url某些字段进行md5加密的方法，来校验url是否合法。客户有鉴权需求时，请联系UCloud技术支持协助配置，并协商好约定的密钥。鉴权总体策略为，用户按照规则生成如下的链接：
- 'rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy'
+`rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy`
 
 （1）t为16进制的服务器时间戳
 
@@ -137,7 +137,7 @@ Ulive提供录制的测试环境，方便客户进行测试联调。测试环境
 加入域名为publish.ucloud.com.cn，接入点为live，流ID为123。
 
 那么可如下调用该接口禁播：
-'https://api.ucloud.cn/?Action=ForbidLiveStream\&Domain=publish.ucloud.com.cn\&Application=live\&StreamId=123'
+`https://api.ucloud.cn/?Action=ForbidLiveStream\&Domain=publish.ucloud.com.cn\&Application=live\&StreamId=123`
 
 可调用如下接口解禁：
 'https://api.ucloud.cn/?Action=UnforbidLiveStream&Domain=publish.ucloud.com.cn&Application=live&StreamId=123' 
