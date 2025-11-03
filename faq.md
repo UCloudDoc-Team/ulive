@@ -35,10 +35,7 @@
 
 **A:**
 Ulive采用对url某些字段进行md5加密的方法，来校验url是否合法。客户有鉴权需求时，请联系UCloud技术支持协助配置，并协商好约定的密钥。鉴权总体策略为，用户按照规则生成如下的链接：
-
-<nano>
- <test>rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy</test>
- </nano>
+ 'rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy'
 
 （1）t为16进制的服务器时间戳
 
@@ -85,9 +82,7 @@ ULive将直播统一录制为hls。hls具有播放加载时间短，终端播放
 
 2)、filename=xxx（非必须），设置该路流录制后的文件名为xxx.m3u8，如果没有该参数，则默认使用推流id作为文件名。
 
-下面的推流url表示开启录制，并且指定录制的文件名为myfile.m3u8：
-
-<rtmp://publish3.cdn.ucloud.com.cn/ucloud/stream?record=true&filename=myfile>
+下面的推流url表示开启录制，并且指定录制的文件名为myfile.m3u8：'rtmp://publish3.cdn.ucloud.com.cn/ucloud/stream?record=true&filename=myfile'
 
 4、视频智能拼接
 
@@ -95,11 +90,10 @@ ULive将直播统一录制为hls。hls具有播放加载时间短，终端播放
 
 5、如何播放录制的文件
 
-申请ufile的bucket后，ufile会生成默认的加速域名，已经录制好的文件，可以通过加速域名来访问，访问地址如下
-<pre class="pre codeblock"><code> 
- http://加速域名/m3u8文件名;
+申请ufile的bucket后，ufile会生成默认的加速域名，已经录制好的文件，可以通过加速域名来访问，访问地址为：'http://加速域名/m3u8文件名';
  
- 假设您申请的bucket名称为mybucket，录制的文件名为myfile，那么录制文件的播放地址为：http://mybucket.ufile.ucloud.com.cn/myfile.m3u8 </code></pre>
+假设您申请的bucket名称为mybucket，录制的文件名为myfile，那么录制文件的播放地址为：'http://mybucket.ufile.ucloud.com.cn/myfile.m3u8' 
+
 
 6、录制回调功能
 
@@ -115,12 +109,9 @@ http://cgi.ucloud.com.cn/record_callback?filename=300000039_1462860643.m3u8&file
 
 Ulive提供录制的测试环境，方便客户进行测试联调。测试环境的推流域名为：publish3.cdn.ucloud.com.cn，接入点为：ucloud，录制的文件存储在ulive-record这个bucket中。
 
-假设您的直播流id是mystream，想要录制的文件名是myfile.m3u8，则使用如下的推流地址即可进行录制：
-<pre class="pre codeblock"><code> 
-<rtmp://publish3.cdn.ucloud.com.cn/ucloud/mystream?record=true&filename=myfile>
+假设您的直播流id是mystream，想要录制的文件名是myfile.m3u8，则使用此的推流地址即可进行录制:'rtmp://publish3.cdn.ucloud.com.cn/ucloud/mystream?record=true&filename=myfile'
 
-当您推流结束后，您可以通过如下地址播放录制好的视频：<http://ulive-record.ufile.ucloud.com.cn/myfile.m3u8>
- </code></pre>
+当您推流结束后，您可以通过如下地址播放录制好的视频：'http://ulive-record.ufile.ucloud.com.cn/myfile.m3u8'
  
 ## Q：我能对直播过程截图么？
 
@@ -146,14 +137,10 @@ Ulive提供录制的测试环境，方便客户进行测试联调。测试环境
 加入域名为publish.ucloud.com.cn，接入点为live，流ID为123。
 
 那么可如下调用该接口禁播：
-<pre class="pre codeblock"><code> 
-<https://api.ucloud.cn/?Action=ForbidLiveStream>
-\&Domain=publish.ucloud.com.cn\&Application=live\&StreamId=123
+'https://api.ucloud.cn/?Action=ForbidLiveStream\&Domain=publish.ucloud.com.cn\&Application=live\&StreamId=123'
 
 可调用如下接口解禁：
-
-<https://api.ucloud.cn/?Action=UnforbidLiveStream&Domain=publish.ucloud.com.cn&Application=live&StreamId=123>
- </code></pre>
+'https://api.ucloud.cn/?Action=UnforbidLiveStream&Domain=publish.ucloud.com.cn&Application=live&StreamId=123' 
  
 ## Q：如何获取推流状态？
 
