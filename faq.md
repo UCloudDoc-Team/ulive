@@ -13,17 +13,7 @@
 
 **A:** 提供，可在直播控制台中下载。
 
-## Q:如何联系UCloud直播云？
 
-**A:** UCloud直播云为客户提供多个沟通渠道，具体如下：
-
-1） UCloud客服邮箱 C_onlinesales@ucloud.cn
-
-2） 线下客户经理
-
-3） QQ-4000188113
-
-4） Tel-4000188113
 
 ## 3. 后台
 
@@ -45,7 +35,10 @@
 
 **A:**
 Ulive采用对url某些字段进行md5加密的方法，来校验url是否合法。客户有鉴权需求时，请联系UCloud技术支持协助配置，并协商好约定的密钥。鉴权总体策略为，用户按照规则生成如下的链接：
-rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy
+
+<nano>
+ <test>rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy</test>
+ </nano>
 
 （1）t为16进制的服务器时间戳
 
@@ -54,8 +47,8 @@ rtmp://abc.com/application/mystream?k=xxxxxx&t=yyyy
 本例中，流路径为"/application/mystream "
 
 Ulive服务器会对url进行校验，并检查时间t是否过期。其中过期时间可以按需求进行配置，默认配置为5分钟。 
-示例： 
-
+示例：
+<pre class="pre codeblock"><code>
 （1）未加密前url为
  rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest
 
@@ -66,7 +59,7 @@ Ulive服务器会对url进行校验，并检查时间t是否过期。其中过�
 
 最终生成的链接如下： 
 rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/mytest?t=52946dd7&k=2f94cdaf8ea4bdca793e64aba7cb1dea
-
+</code></pre>
 
 ## Q：可以对直播进行录制么？
 
@@ -102,28 +95,33 @@ ULive将直播统一录制为hls。hls具有播放加载时间短，终端播放
 
 5、如何播放录制的文件
 
-申请ufile的bucket后，ufile会生成默认的加速域名，已经录制好的文件，可以通过加速域名来访问，访问地址为：<http://加速域名/m3u8文件名。假设您申请的bucket名称为mybucket，录制的文件名为myfile，那么录制文件的播放地址为：http://mybucket.ufile.ucloud.com.cn/myfile.m3u8>.
+申请ufile的bucket后，ufile会生成默认的加速域名，已经录制好的文件，可以通过加速域名来访问，访问地址如下
+<pre class="pre codeblock"><code> 
+ http://加速域名/m3u8文件名;
+ 
+ 假设您申请的bucket名称为mybucket，录制的文件名为myfile，那么录制文件的播放地址为：http://mybucket.ufile.ucloud.com.cn/myfile.m3u8 </code></pre>
 
 6、录制回调功能
 
 文件录制完成后，可以回调客户的接口，通知录制的文件名、文件大小、时长等信息。回调的url格式如下：
 
-<http:%%//%%接口地址?filename=文件名&filesize=文件大小&spacename=bucket名称&duration=视频时长>
-
+<pre class="pre codeblock"><code>  
+http:%%//%%接口地址?filename=文件名&filesize=文件大小&spacename=bucket名称&duration=视频时长
 以下是一个回调的例子：
-
-<http://cgi.ucloud.com.cn/record_callback?filename=300000039_1462860643.m3u8&filesize=13719488&spacename=record&duration=163>
+http://cgi.ucloud.com.cn/record_callback?filename=300000039_1462860643.m3u8&filesize=13719488&spacename=record&duration=163
+</code></pre>
 
 7、如何测试直播录制
 
 Ulive提供录制的测试环境，方便客户进行测试联调。测试环境的推流域名为：publish3.cdn.ucloud.com.cn，接入点为：ucloud，录制的文件存储在ulive-record这个bucket中。
 
 假设您的直播流id是mystream，想要录制的文件名是myfile.m3u8，则使用如下的推流地址即可进行录制：
-
+<pre class="pre codeblock"><code> 
 <rtmp://publish3.cdn.ucloud.com.cn/ucloud/mystream?record=true&filename=myfile>
 
 当您推流结束后，您可以通过如下地址播放录制好的视频：<http://ulive-record.ufile.ucloud.com.cn/myfile.m3u8>
-
+ </code></pre>
+ 
 ## Q：我能对直播过程截图么？
 
 **A:** 支持，ULive支持周期性截取视频关键帧，并保存到对象存储。需要该功能请提交工单。
@@ -148,20 +146,22 @@ Ulive提供录制的测试环境，方便客户进行测试联调。测试环境
 加入域名为publish.ucloud.com.cn，接入点为live，流ID为123。
 
 那么可如下调用该接口禁播：
-
+<pre class="pre codeblock"><code> 
 <https://api.ucloud.cn/?Action=ForbidLiveStream>
 \&Domain=publish.ucloud.com.cn\&Application=live\&StreamId=123
 
 可调用如下接口解禁：
 
 <https://api.ucloud.cn/?Action=UnforbidLiveStream&Domain=publish.ucloud.com.cn&Application=live&StreamId=123>
-
+ </code></pre>
+ 
 ## Q：如何获取推流状态？
 
 **A:**
 ULive通过回调客户接口，通知当前推流状态。当主播推流开始或者推流结束时，ULive可以通过客户配置的回调接口，通知客户推流开始或者断开的事件，方便客户对直播流进行
 管理。客户需要回调功能时，请联系技术支持进行配置。推流开始和推流结束的端口需分开配置，示例如下：
-
+<pre class="pre codeblock"><code> 
+ 
 1、通知客户推流开始：
 
 <http://127.0.0.1/publish_start?ip=推流端IP&id=流名&node=节点IP&app=推流域名&appname=发布点>
@@ -170,7 +170,7 @@ ULive通过回调客户接口，通知当前推流状态。当主播推流开始
 
 <http://127.0.0.1/publish_stop?ip=推流端IP&id=流名&node=节点IP&app=推流域名&appname=发布点>
 其中，publish\_start和publish\_stop为客户提供的回调cgi。
-
+ </code></pre>
 
 ## Q：可以在直播中支持广告么？
 
