@@ -142,11 +142,6 @@ rtmp://vlive3.rtmp.cdn.ucloud.com.cn/ucloud/test?only-audio=1
 
 直播截图可以自定义截图间隔以及图片分辨率，并且可以开启鉴黄功能。
 
-## 低延时直播体验
-
-低延迟直播，基于rtc协议，比传统直播协议延迟更低，为观众提供毫秒级的直播观看体验。满足对延迟性能高要求的场景需求，适用于直播课程、电商直播、赛事直播等业务场景。
-
-**体验链接：http://ucdsdk.ufile.ucloud.com.cn/webrtc/index.html**
 
 
 如需了解更多，请联系相关客户经理
